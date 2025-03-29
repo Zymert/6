@@ -22,6 +22,7 @@ body {
     padding: 40px 20px;
     background: url('../images/bg_head4.png') no-repeat center center/cover;
   }
+
   
   header img {
     width: 100px;
@@ -30,10 +31,14 @@ body {
   header h1 {
     font-family: 'Playfair Display', serif;
     font-size: 42px;
-    color: #3a3a3a;
+    color: #303336;
     margin-bottom: 30px;
   }
   
+  header h2 {
+    color: #464545;
+  }
+
   header p {
     font-size: 20px;
     color: #535353;
@@ -88,8 +93,11 @@ body {
   }
   
   .btn:hover {
-    transform: scale(1.05);
-    opacity: 0.9;
+    background-color: #fc7e68
+  }
+
+  .btn.personal:hover {
+    background-color: #539ad4;
   }
   
   .how-it-works {
