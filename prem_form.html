@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Индивидуальная Программа Стройности</title>
+    <link rel="stylesheet" href="css/styles_form.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo3.png" alt="">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="afisha">
+        <div class="afisha_text">
+            <h1>Добро пожаловать на страницу для индивидуального подбора!</h1>
+            <div class="subscrue">
+                <p>Я ваш персональный консультант Надежда.</p>
+                <p>Я практикующий бьюти мастер, мой опыт работы в данной сфере более 10 лет.</p>
+                <p>Занимаюсь профессиональной разработкой СПА программ для достижения необходимого результата у клиента.</p>
+                <p>При разработке программы учитываю индивидуальные особенности человека(параметры тела, возраст, перенесенные или текущие заболевания)</p>
+            </div>
+             <!-- Кнопка для открытия формы -->
+    <button id="openFormButton">Форма составления программы СПА процедур</button>
+    <!-- Модальное окно с формой -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <section class="form-section">
+                <h1>Форма для Составления Индивидуальной Программы Стройности</h1>
+                <form id="telegramForm" method="post">
+                    <fieldset>
+                        <legend>1. Фото</legend>
+                        <label for="photo-front">Фото спереди:</label>
+                        <input class="foto_load" type="file" id="photo-front" name="photo-front" accept="image/*" required><br>
+                        <label for="photo-side1">Фото сбоку (левая сторона):</label>
+                        <input type="file" id="photo-side1" name="photo-side1" accept="image/*" required><br>
+                        <label for="photo-side2">Фото сбоку (правая сторона):</label>
+                        <input type="file" id="photo-side2" name="photo-side2" accept="image/*" required><br>
+                        <label for="photo-back">Фото сзади:</label>
+                        <input type="file" id="photo-back" name="photo-back" accept="image/*" required><br>
+                    </fieldset>
+                    <fieldset>
+                        <legend>2. Замеры объемов</legend>
+                        <label for="right-arm">Рука правая (см):<span class="tooltip">!
+                            <span class="tooltiptext">Замеряется в самой большой части, на вытянутой руке, на провисшем трицепсе, без перетяжки, но плотно.</span>
+                        </span></label>
+                        <input type="number" id="right-arm" name="right-arm" required><br>
+                        <label for="left-arm">Рука левая (см):<span class="tooltip">!
+                            <span class="tooltiptext">Замеряется в самой большой части, на вытянутой руке, на провисшем трицепсе, без перетяжки, но плотно.</span>
+                        </span></label>
+                        <input type="number" id="left-arm" name="left-arm" required><br>
+                        <label for="stomach-upper">Живот (верхняя часть) (см):<span class="tooltip">!
+                            <span class="tooltiptext">Замеряется на уровне, где заканчивается бюстгалтер.</span>
+                        </span></label>
+                        <input type="number" id="stomach-upper" name="stomach-upper" required><br>
+                        <label for="waist">Талия (см):<span class="tooltip">!
+                            <span class="tooltiptext">Замер самой узкой части.</span>
+                        </span></label>
+                        <input type="number" id="waist" name="waist" required><br>
+                        <label for="stomach-mid">Живот (средняя часть) (см):<span class="tooltip">!
+                            <span class="tooltiptext">Замер низа живота через пупок.</span>
+                        </span></label>
+                        <input type="number" id="stomach-mid" name="stomach-mid" required><br>
+                        <label for="stomach-lower">Живот (нижняя часть) (см):<span class="tooltip">!
+                            <span class="tooltiptext">Самая толстая часть внизу живота.</span>
+                        </span></label>
+                        <input type="number" id="stomach-lower" name="stomach-lower" required><br>
+                        <label for="buttocks-mid">Ягодицы (середина) (см):<span class="tooltip">!
+                            <span class="tooltiptext">Ноги вместе.Самая широкая часть.</span>
+                        </span></label>
+                        <input type="number" id="buttocks-mid" name="buttocks-mid" required><br>
+                        <label for="buttocks-lower">Ягодицы (нижняя часть) (см):<span class="tooltip">!
+                            <span class="tooltiptext">Замер под ягодицами, ноги вместе.</span></label>
+                        <input type="number" id="buttocks-lower" name="buttocks-lower" required>
+                        </span><br>
+                        <label for="right-leg-upper">Нога правая (верхняя часть) (см):<span class="tooltip">!
+                            <span class="tooltiptext">Самая широкая часть ноги.</span>
+                        </span></label>
+                        <input type="number" id="right-leg-upper" name="right-leg-upper" required><br>
+                        <label for="right-leg-above-knee">Нога правая (над коленом) (см):</label>
+                        <input type="number" id="right-leg-above-knee" name="right-leg-above-knee" required><br>
+                        <label for="left-leg-upper">Нога левая (верхняя часть) (см):<span class="tooltip">!
+                            <span class="tooltiptext">Самая широкая часть ноги.</span>
+                        </span></label>
+                        <input type="number" id="left-leg-upper" name="left-leg-upper" required><br>
+                        <label for="left-leg-above-knee">Нога левая (над коленом) (см):</label>
+                        <input type="number" id="left-leg-above-knee" name="left-leg-above-knee" required><br>
+                    </fieldset>
+                    <fieldset>
+                        <legend>3. Анкетирование</legend>
+                        <label for="height">Рост (см):</label>
+                        <input type="number" id="height" name="height" required><br>
+                        <label for="weight">Вес (кг):</label>
+                        <input type="number" id="weight" name="weight" required><br>
+                        <label for="age">Возраст:</label>
+                        <input type="number" id="age" name="age" required><br>
+                        <label for="childbirth">Роды:</label>
+                        <select id="childbirth" class="chek" name="childbirth" required>
+                            <option value="none">Не было</option>
+                            <option value="natural-recent">Естественные (недавно)</option>
+                            <option value="natural-long-ago">Естественные (давно)</option>
+                            <option value="c-section-recent">Кесарево (недавно)</option>
+                            <option value="c-section-long-ago">Кесарево (давно)</option>
+                        </select><br>
+                        <label for="tumors">Новообразования:</label>
+                        <select id="tumors" class="chek" name="tumors" required>
+                            <option value="none">Нет</option>
+                            <option value="benign">Доброкачественные</option>
+                            <option value="malignant">Злокачественные</option>
+                            <option value="past-benign">Ранее доброкачественные</option>
+                            <option value="past-malignant">Ранее злокачественные</option>
+                        </select><br>
+                        <label for="hereditary-obesity">Наследственная предрасположенность к лишнему весу:</label>
+                        <input type="text" id="hereditary-obesity" name="hereditary-obesity" required><br>
+                        <label for="spine">Позвоночник:</label>
+                        <select id="spine" class="chek" name="spine" required>
+                            <option value="none">Нет</option>
+                            <option value="herniated-disc">Грыжи</option>
+                            <option value="protrusion">Протрузии</option>
+                            <option value="scoliosis">Сколиозы</option>
+                            <option value="osteochondrosis">Остеохондрозы</option>
+                        </select><br>
+                        <label for="stomach-diseases">Болезни желудка:</label>
+                        <input type="text" id="stomach-diseases" name="stomach-diseases" required><br>
+                        <label for="past-surgeries">Были ли операции (как давно):</label>
+                        <input type="text" id="past-surgeries" name="past-surgeries" required><br>
+                        <label for="kidneys">Почки:</label>
+                        <input type="text" id="kidneys" name="kidneys" required><br>
+                        <label for="blood-pressure">Давление:</label>
+                        <select id="blood-pressure" class="chek" name="blood-pressure" required>
+                            <option value="low">Пониженное</option>
+                            <option value="normal">Норма</option>
+                            <option value="high">Повышенное</option>
+                        </select><br>
+                        <label for="gynecology">Гинекология:</label>
+                        <input type="text" id="gynecology" name="gynecology" required><br>
+                        <label for="cardio-vascular">Сердечно-сосудистая система:</label>
+                        <input type="text" id="cardio-vascular" name="cardio-vascular" required><br>
+                        <label for="body-care">Какие уходовые процедуры по телу делаются дома:</label>
+                        <input type="text" id="body-care" name="body-care" required><br>
+                    </fieldset>
+                    <button type="submit">Отправить</button>
+                </form>
+            </section>
+        </div>
+    </div>
+        </div>
+
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Интернет-сервис по подбору спа программ. Все права защищены.</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('telegramForm').addEventListener('submit', async function(e) {
+          e.preventDefault();
+          
+          const formData = new FormData(this);
+          const data = Object.fromEntries(formData.entries());
+          
+          try {
+            const response = await axios.post('/api/send-to-telegram', data);
+            if(response.data.success) {
+              alert('Данные отправлены! Мастер свяжется с вами в Telegram.');
+              this.reset();
+            }
+          } catch (error) {
+            alert('Ошибка отправки: ' + error.message);
+          }
+        });
+        </script>
+</body>
+
+</html>

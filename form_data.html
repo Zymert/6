@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Индивидуальная Программа Стройности</title>
+    <link rel="stylesheet" href="css/styles_form.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo3.png" alt="">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="form-section">
+        <h1>Форма для Составления Индивидуальной Программы Стройности</h1>
+        <form action="submit-form.php" method="post" enctype="multipart/form-data">
+           <!--  <fieldset>
+                <legend>1. Фото</legend>
+                <label for="photo-front">Фото спереди:</label>
+                <input type="file" id="photo-front" name="photo-front" accept="image/*" required><br>
+                <label for="photo-side1">Фото сбоку (левая сторона):</label>
+                <input type="file" id="photo-side1" name="photo-side1" accept="image/*" required><br>
+                <label for="photo-side2">Фото сбоку (правая сторона):</label>
+                <input type="file" id="photo-side2" name="photo-side2" accept="image/*" required><br>
+                <label for="photo-back">Фото сзади:</label>
+                <input type="file" id="photo-back" name="photo-back" accept="image/*" required><br>
+            </fieldset> -->
+            <!-- <fieldset>
+                <legend>1. Замеры объемов</legend>
+                <label for="right-arm">Рука правая (см):<span class="tooltip">!
+                    <span class="tooltiptext">Замеряется в самой большой части, на вытянутой руке, на провисшем трицепсе, без перетяжки, но плотно.</span>
+                </span></label>
+                <input type="number" id="right-arm" name="right-arm" required>
+                <label for="left-arm">Рука левая (см):<span class="tooltip">!
+                    <span class="tooltiptext">Замеряется в самой большой части, на вытянутой руке, на провисшем трицепсе, без перетяжки, но плотно.</span>
+                </span></label>
+                <input type="number" id="left-arm" name="left-arm" required>
+                <label for="stomach-upper">Живот (верхняя часть) (см):<span class="tooltip">!
+                    <span class="tooltiptext">Замеряется на уровне, где заканчивается бюстгалтер.</span>
+                </span></label>
+                <input type="number" id="stomach-upper" name="stomach-upper" required>
+                <label for="waist">Талия (см):<span class="tooltip">!
+                    <span class="tooltiptext">Замер самой узкой части.</span>
+                </span></label>
+                <input type="number" id="waist" name="waist" required>
+                <label for="stomach-mid">Живот (средняя часть) (см):<span class="tooltip">!
+                    <span class="tooltiptext">Замер низа живота через пупок.</span>
+                </span></label>
+                <input type="number" id="stomach-mid" name="stomach-mid" required>
+                <label for="stomach-lower">Живот (нижняя часть) (см):<span class="tooltip">!
+                    <span class="tooltiptext">Самая толстая часть внизу живота.</span>
+                </span></label>
+                <input type="number" id="stomach-lower" name="stomach-lower" required>
+                <label for="buttocks-mid">Ягодицы (середина) (см):<span class="tooltip">!
+                    <span class="tooltiptext">Ноги вместе.Самая широкая часть.</span>
+                </span></label>
+                <input type="number" id="buttocks-mid" name="buttocks-mid" required>
+                <label for="buttocks-lower">Ягодицы (нижняя часть) (см):<span class="tooltip">!
+                    <span class="tooltiptext">ЗАмер под ягодицами, ноги вместе.</span>
+                </span></label>
+                <input type="number" id="buttocks-lower" name="buttocks-lower" required>
+                <label for="right-leg-upper">Нога правая (верхняя часть) (см):<span class="tooltip">!
+                    <span class="tooltiptext">Самая широкая часть ноги.</span>
+                </span></label>
+                <input type="number" id="right-leg-upper" name="right-leg-upper" required>
+                <label for="right-leg-above-knee">Нога правая (над коленом) (см):</label>
+                <input type="number" id="right-leg-above-knee" name="right-leg-above-knee" required><br>
+                <label for="left-leg-upper">Нога левая (верхняя часть) (см):<span class="tooltip">!
+                    <span class="tooltiptext">Самая широкая часть ноги.</span>
+                </span></label>
+                <input type="number" id="left-leg-upper" name="left-leg-upper" required>
+                <label for="left-leg-above-knee">Нога левая (над коленом) (см):</label>
+                <input type="number" id="left-leg-above-knee" name="left-leg-above-knee" required><br>
+            </fieldset> -->
+            <fieldset>
+                <legend>2. Анкетирование</legend>
+                <label for="height">Рост (см):</label>
+                <input type="number" id="height" name="height" required><br>
+                <label for="weight">Вес (кг):</label>
+                <input type="number" id="weight" name="weight" required><br>
+                <label for="age">Возраст:</label>
+                <input type="number" id="age" name="age" required><br>
+                <label for="childbirth">Роды:</label>
+                <select id="childbirth" class="chek" name="childbirth" required>
+                    <option value="none">Не было</option>
+                    <option value="natural-recent">Естественные (недавно)</option>
+                    <option value="natural-long-ago">Естественные (давно)</option>
+                    <option value="c-section-recent">Кесарево (недавно)</option>
+                    <option value="c-section-long-ago">Кесарево (давно)</option>
+                </select><br>
+                <label for="tumors">Новообразования:</label>
+                <select id="tumors" class="chek" name="tumors" required>
+                    <option value="none">Нет</option>
+                    <option value="benign">Доброкачественные</option>
+                    <option value="malignant">Злокачественные</option>
+                    <option value="past-benign">Ранее доброкачественные</option>
+                    <option value="past-malignant">Ранее злокачественные</option>
+                </select><br>
+                <label for="hereditary_obesity">Наследственная предрасположенность к лишнему весу:</label>
+                <input type="text" id="hereditary_obesity" name="hereditary_obesity" required><br>
+                <label for="spine">Позвоночник:</label>
+                <select id="spine" class="chek" name="spine" required>
+                    <option value="none">Нет</option>
+                    <option value="herniated-disc">Грыжи</option>
+                    <option value="protrusion">Протрузии</option>
+                    <option value="scoliosis">Сколиозы</option>
+                    <option value="osteochondrosis">Остеохондрозы</option>
+                </select><br>
+                <label for="stomach_diseases">Болезни желудка:</label>
+                <input type="text" id="stomach_diseases" name="stomach_diseases" required><br>
+                <label for="past_surgeries">Были ли операции (как давно):</label>
+                <input type="text" id="past_surgeries" name="past_surgeries" required><br>
+                <label for="kidneys">Почки:</label>
+                <input type="text" id="kidneys" name="kidneys" required><br>
+                <label for="blood_pressure">Давление:</label>
+                <select id="blood_pressure" class="chek" name="blood_pressure" required>
+                    <option value="low">Пониженное</option>
+                    <option value="normal">Норма</option>
+                    <option value="high">Повышенное</option>
+                </select><br>
+                <label for="gynecology">Гинекология:</label>
+                <input type="text" id="gynecology" name="gynecology" required><br>
+                <label for="cardio_vascular">Сердечно-сосудистая система:</label>
+                <input type="text" id="cardio_vascular" name="cardio_vascular" required><br>
+                <label for="body_care">Какие уходовые процедуры по телу делаются дома:</label>
+                <input type="text" id="body_care" name="body_care" required><br>
+            </fieldset>
+            <button type="submit">Отправить</button>
+        </form>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Интернет-сервис по подбору спа программ. Все права защищены.</p>
+        </div>
+    </footer>
+    <script>
+        function submitForm() {
+    // Получаем значения полей
+    const weight = document.getElementById('weight').value;
+    const height = document.getElementById('height').value;
+    const age = document.getElementById('age').value;
+    const childbirth = document.getElementById('childbirth').value;
+    const tumors = document.getElementById('tumors').value;
+    const hereditary_obesity = document.getElementById('hereditary_obesity').value;
+    const spine = document.getElementById('spine').value;
+    const stomach_diseases = document.getElementById('stomach_diseases').value;
+    const past_surgeries = document.getElementById('past_surgeries').value;
+    const kidneys = document.getElementById('kidneys').value;
+    const blood_pressure = document.getElementById('blood_pressure').value;
+    const gynecology = document.getElementById('gynecology').value;
+    const cardio_vascular = document.getElementById('cardio_vascular').value;
+    const body_care = document.getElementById('body_care').value;
+
+    // Формируем объект с данными
+    const formData = {
+        weight: weight,
+        height: height,
+        age:age,
+        childbirth:childbirth,
+        tumors:tumors,
+        hereditary_obesity:hereditary_obesity,
+        spine:spine,
+        stomach_diseases:stomach_diseases,
+        past_surgeries:past_surgeries,
+        kidneys:kidneys,
+        blood_pressure:blood_pressure,
+        gynecology:gynecology,
+        cardio_vascular:cardio_vascular,
+        body_care:body_care,
+    };
+
+    // Отображаем данные на экране (можно отправить на сервер с использованием fetch)
+    const resultDiv = document.getElementById('result');
+    resultDiv.innerHTML = `
+        <p>Вес: ${formData.weight} кг</p>
+        <p>Рост: ${formData.height} см</p>
+        <p>Талия: ${formData.waist} см</p>
+        <p>Грудь: ${formData.chest} см</p>
+        <p>Ноги: ${formData.legs} см</p>
+        <p>Руки: ${formData.arms} см</p>
+        <p>Заболевания: ${formData.conditions}</p>
+    `;
+}
+    </script>
+</body>
+
+</html>

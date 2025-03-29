@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интернет-сервис по подбору спа программ</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">ГЛАВНАЯ</a></li>
+                    <li><a href="about us.html">О НАС</a></li>
+                    <li><a href="#target-section_spa">УСЛУГИ</a></li>
+                    <li><a href="#">КАК ЭТО РАБОТАЕТ</a></li>
+                    <li><a href="#target-section">ОТЗЫВЫ</a></li>
+                    <li><a href="#">КОНТАКТЫ</a></li>
+                </ul>
+            </nav>
+            <h1>Персонализированные СПА программы для вашего здоровья и красоты</h1>
+            <p>Откройте для себя индивидуальные СПА процедуры, основанные на ваших потребностях и предпочтениях.</p>
+            <div class="button">
+                <a href="form_data.html" class="cta-button">Бесплатный подбор</a>
+                <a href="prem_form.html" class="cta-button2">Персональная консультация</a>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+        <section class="discription">
+            <h2 class="abaut">Как работает данный сервис</h2>
+            <p>Вам нужно выбрать один из предложенных вариантов-это "Бесплатный 
+                подбор", где заполнив небольшую форму вам автоматически 
+                сформируется перечень процедур необходимых для достижения вашей цели
+                или же выбрать "Персональная консультация" для более детального анализа
+                и более точного персонализированного подбора с учетом всех ваших особенностей
+
+            </p>
+        </section>
+        </div>
+        <section class="advantages">
+            <div class="container">
+                <h2>Преимущества нашего сервиса</h2>
+                <div class="advantage-items">
+                    <div class="advantage-item">
+                        <img src="images/icon-wishlist1.png" alt="" class="icon_advant">
+                        <h3>Индивидуальный подход</h3>
+                        <p>Персонализированные спа-программы, разработанные с учетом ваших уникальных потребностей и предпочтений.</p>
+                    </div>
+                    <div class="advantage-item">
+                        <img src="images/icon-diploma2.png" alt="" class="icon_advant">
+                        <h3>Квалифицированные специалисты</h3>
+                        <p>Все наши сотрудники имеют соответствующую квалификацию и опыт.</p>
+                    </div>
+                    <div class="advantage-item">
+                        <img src="images/icon-tasks2.png" alt="" class="icon_advant">
+                        <h3>Экономия времени</h3>
+                        <p>Мы берем на себя все заботы по подбору и организации спа-программ.</p>
+                    </div>
+                    <div class="advantage-item">
+                        <img src="images/icon-shield2.png" alt="" class="icon_advant">
+                        <h3>Высокое качество услуг</h3>
+                        <p>Мы используем только проверенные и качественные косметические средства.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Интернет-сервис по подбору спа программ. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,307 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #88BDBC;
+    
+}
+
+header {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    align-items: center;
+    padding: 20px 20px 0 20px;
+/*    border-bottom: 1px solid #000;*/
+    text-align: center;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo img{
+    width: 100px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+    margin: 0 auto;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a.active {
+    color: #414141; /* Цвет активного пункта меню */
+    font-weight: bold;
+
+}
+
+header nav ul li a:hover{
+    color: #065293;
+}
+
+.afisha{
+    background: url('../images/bg_head1.png') no-repeat center center/cover;
+}
+
+.afisha_text{
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 1600px;
+    
+}
+
+
+
+.afisha h1{
+    padding-top: 60px;
+    text-align: center;
+}
+
+.subscrue{
+    padding-top: 30px;
+    
+
+}
+.subscrue p{
+
+    line-height: 2em;
+    text-align: center;
+    font-size: 16pt;
+    color: #252323;
+    padding-left: 40px;
+    
+}
+
+
+section.form-section {
+    padding: 40px 20px;
+    background-color: #F9F9F9;
+    border-radius: 20px;
+    max-width: 800px;
+    margin: 40px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section.form-section h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Стили для затенения фона и модального окна */
+body.modal-open {
+    overflow: hidden;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px); /* Размытие заднего фона */
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 10px;
+    position: relative;
+    filter: none; /* Отключаем размытие для модального окна */
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Стили для кнопки */
+#openFormButton {
+    font-size: 2.5em;
+    display: block;
+    margin: 0 auto;
+    margin-right: 40px;
+    padding: 10px 20px;
+    background-color: #2a9e8f;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 440px;
+}
+
+#openFormButton:hover {
+    background-color: #128FA5;
+    transition: color 0.2s ease;
+    color: #fffdfd;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 20px;
+    font-weight: bold;
+}
+
+
+
+legend {
+    font-weight: bold;
+}
+
+label {
+
+    display: flex;
+    margin-bottom: 5px;
+}
+
+input[type="file"],
+input[type="text"],
+select {
+    width: 94%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #2ac6e9be;
+}
+
+
+input[type="number"]{
+    width: 94%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #E5F6FA;
+}
+
+input[type="file"]{
+    width: 94%;
+}
+
+.chek{
+    width: 97%;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 8px;
+    /* background-color: #fae4e4; */
+    color:  rgb(23, 97, 107);
+    font-weight: bold;
+    border: 1px solid rgb(23, 97, 107);
+    border-radius: 50%;
+    height: 16px;
+    width: 16px;
+    text-align: center;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #2a5457;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Смещаем подсказку вверх */
+    left: 50%;
+    margin-left: -100px; /* Центрируем подсказку */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%; /* Находится внизу подсказки */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent; /* Треугольник */
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+button {
+    padding: 15px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: center;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+footer {
+    background: linear-gradient(to right, #88BDBC 0%, #658F8E 50%, #88BDBC 100%);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+   
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
